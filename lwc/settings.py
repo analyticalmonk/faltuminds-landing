@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'joins',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,7 +77,7 @@ USE_L10N = True
 USE_TZ = True
 
 TEMPLATE_DIRS = (
-    '/home/akash/lwc/lwc/templates/',
+    os.path.join(BASE_DIR, 'templates'),
     )
 
 # Static files (CSS, JavaScript, Images)
