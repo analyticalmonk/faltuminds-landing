@@ -9,3 +9,4 @@ class EmailForm(forms.Form):
 class joinForm(forms.ModelForm):
 	class Meta:
 		model = join
+		fields = ["email"]
