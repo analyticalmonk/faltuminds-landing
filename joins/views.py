@@ -26,9 +26,16 @@ def get_ref_id():
 
 def share(request, ref_id):
 	#print ref_id
-	context = {"ref_id": ref_id}
-	template = "share.html"
-	return render(request, template, context)
+	try:
+		join_obj = join.objects.get(ref_id=ref_id)
+		friends_referred = join.objects.filter(friend=obj)
+		count = join_obj.referral.all().count()
+		ref_url = "http://fmlanding.herokuapp.com/?ref=%s" %(join_obj.ref_id
+		context = {"ref_id": join_obj.ref_id, "count": count, "ref_url": ref_url}
+		template = "share.html"
+		return render(request, template, context)
+	except:
+		raise HTTP404
 	
 
 def home(request):
@@ -54,6 +61,8 @@ def home(request):
 				new_join_old.friend = obj
 			new_join_old.ip = get_ip(request)
 			new_join_old.save()
+		print join.objects.filter(friend=obj).count()
+
 		return HttpResponseRedirect("/%s" %(new_join_old.ref_id))
 		# new_join.ip = get_ip(request)
 		# new_join.save()
