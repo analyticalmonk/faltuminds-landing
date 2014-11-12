@@ -1,6 +1,21 @@
 {% extends "base.html" %}
+{%load staticfiles%}
 
 {%block content%}
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <div class = 'col-sm-6'>
+          <h1 style="font-family:Vivaldi">Bakchodi nahi chutiyapa hai ye!!</h1>
+          <p>Ho gayi bakchodi! :P </p>
+          <p><a class="btn btn-success btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        </div>
+          <div class ='col-sm-6'>
+            <img src="{%static 'img/kaley'%}" class = "img-responsive">
+          </div>
+      </div>
+    </div>  
 
 {{ref_id}}
 
