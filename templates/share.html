@@ -6,21 +6,76 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <div class = 'col-sm-6'>
-          <h1 style="font-family:Vivaldi">Bakchodi nahi chutiyapa hai ye!!</h1>
-          <p>Ho gayi bakchodi! :P </p>
-          <p><a class="btn btn-success btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <div class="row">
+        <div class = 'col-md-6 pull-right' style= 'text-align:center'>
+          <i class="fa fa-share fa-4x"></i>
+          <h1>Bhai logon ko bulane ka!!</h1>
+          <p>Samjhe na bhidu log?!</p>
+          <div class = "well" style="background-color: white">{{ref_url}}</div>
+          <h4>Share</h4>
+          <i class="fa fa-facebook-square fa-4x" style = "color: #3b5998"></i>
+
         </div>
-          <div class ='col-sm-6'>
-            <img src="{%static 'img/kaley'%}" class = "img-responsive">
+          <div class ='col-md-6 pull-left'>
+            <img src="{%static 'img/kaley'%}" class = "img-responsive img-rounded">
           </div>
+      </div>    
       </div>
     </div>  
+
+
 
 {{ref_id}}
 
 {{count}}
 
-{{ref_url}}
+    <br><br>
+
+    <div>
+      <h1 style="text-align: center">Progress</h1><br>
+    </div>
+    <div class = "row">
+
+      <div class = "col-sm-3" style = "text-align:center">
+        <h3>Mast</h3>  
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          60%
+          </div>
+        </div>
+        <i class="fa fa-hacker-news fa-5x" style = "color: #F26522"></i>
+      </div>
+
+      <div class = "col-sm-3" style = "text-align:center">
+        <h3>Sahi!</h3>  
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          60%
+          </div>
+        </div>
+        <i class="fa fa-hacker-news fa-5x" style = "color: #F26522"></i>
+      </div>
+
+      <div class = "col-sm-3" style = "text-align:center">  
+        <h3>Jhakkasss!</h3>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          60%
+          </div>
+        </div>
+        <i class="fa fa-hacker-news fa-5x" style = "color: #F26522"></i>
+      </div>
+
+      <div class = "col-sm-3" style = "text-align:center">  
+        <h3>Jamayla!!</h3>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          60%
+          </div>
+        </div>
+        <i class="fa fa-hacker-news fa-5x" style = "color: #F26522"></i>
+      </div>
+    
+    </div>
 
 {% endblock %}
